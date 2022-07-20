@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const app=express()
 const geo=require('./geocode')
 const weather=require('./weatherstack')
+
+const port =process.env.POERT || 3000
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static('D:/vs code/Node JS Udemy/Weather App -Final/public')) //to access static files
@@ -54,4 +56,4 @@ app.get('/weather',(req,res)=>
 })
 
 
-app.listen(3000)
+app.listen(port)
