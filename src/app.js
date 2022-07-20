@@ -5,13 +5,13 @@ const app=express()
 const geo=require('./geocode')
 const weather=require('./weatherstack')
 
-const port =process.env.POERT || 3000
+const port =process.env.PORT || 3000
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static('D:/vs code/Node JS Udemy/Weather App -Final/public')) //to access static files
+app.use(express.static('D:/vs code/Node JS Udemy/Weather-web-App/public')) //to access static files
 
 app.set('view engine','hbs')
-app.set('views','D:/vs code/Node JS Udemy/Weather App -Final/templates/views')
+app.set('views','D:/vs code/Node JS Udemy/Weather-web-App/templates/views')
 
 
 app.get('/',(req,res)=>

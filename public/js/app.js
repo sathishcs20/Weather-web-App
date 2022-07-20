@@ -11,7 +11,7 @@ weatherform.addEventListener('submit',(e)=>
     
     res1.textContent=""
     res1.textContent="loading"
-    fetch("/weather?search="+location).then((data)=>
+    fetch("weather?search="+location).then((data)=>
     {
         data.json().then((res)=>
         {
